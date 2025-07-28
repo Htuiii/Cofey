@@ -1,0 +1,16 @@
+/* Специфичные стили для dashboard */
+.dashboard-card {
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card {
+    border-left: 4px solid #6f4e37;
+}
+
+.recent-orders-table tr:hover {
+    background-color: rgba(111, 78, 55, 0.05);
+}

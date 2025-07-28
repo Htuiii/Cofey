@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block header %}Управление инвентарем{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ингредиент</th>
+                        <th>Количество</th>
+                        <th>Ед. измерения</th>
+                        <th>Поставщик</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ingredient, supplier in ingredients %}
+                    <tr>
+                        <td>{{ ingredient.ingredient_id }}</td>
+                        <td>{{ ingredient.name }}</td>
+                        <td>{{ ingredient.quantity }}</td>
+                        <td>{{ ingredient.unit }}</td>
+                        <td>{{ supplier }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #6f4e37;
+    --secondary-color: #c4a484;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-color);
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: none;
+}
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #5a3d2e;
+    border-color: #5a3d2e;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.order-item-card {
+    transition: transform 0.3s;
+}
+
+.order-item-card:hover {
+    transform: translateY(-5px);
+}
+
+.status-badge {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+.status-pending {
+    background-color: #ffc107; /* Amber */
+    color: #212529;            /* Dark text for readability */
+}
+.status-completed {
+    background-color: #28a745; /* Green */
+    color: #ffffff;            /* White text for good contrast */
+}
+.status-cancelled {
+    background-color: #dc3545; /* Red */
+    color: #ffffff;            /* White text for good contrast */
+}
+
+
+
+.quantity-control {
+    width: 120px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+    }
+}
